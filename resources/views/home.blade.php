@@ -77,46 +77,48 @@
     <section id="four" class="wrapper style1 special fade-up">
         <div class="container">
             <header class="major">
-                <h2>Accumsan sed tempus adipiscing blandit</h2>
-                <p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
+                <h2>PONUDA PAKETA</h2>
+                <p>Izaberi paket koji odgovara tebi</p>
             </header>
             <div class="box alt">
                 <div class="row gtr-uniform">
                     <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-chart-area"></span>
-                        <h3>Ipsum sed commodo</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        <span class="icon solid alt major fa-leaf"></span>
+                        <h3>Detox Bliss</h3>
+                        <p>Pomaže telu da se oslobodi toksina i povrati prirodnu energiju.</p>
                     </section>
                     <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-comment"></span>
-                        <h3>Eleifend lorem ornare</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        <span class="icon solid alt major fa-user"></span>
+                        <h3>Silhouette Touch</h3>
+                        <p>Oblikuje figuru kroz anticelulit tretmane i limfnu drenažu.</p>
+                    </section>
+
+                    <section class="col-4 col-6-medium col-12-xsmall">
+                        <span class="icon solid alt major fa-star"></span>
+                        <h3>Glow Ritual</h3>
+                        <p>Pruža blistav izgled koži kroz piling, masažu i dubinsku negu.</p>
                     </section>
                     <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-flask"></span>
-                        <h3>Cubilia cep lobortis</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        <span class="icon solid alt major fa-spa"></span>
+                        <h3>Harmony Escape</h3>
+                        <p>Paket za relaksaciju tela i uma — savršen beg od svakodnevice.</p>
                     </section>
                     <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-paper-plane"></span>
-                        <h3>Non semper interdum</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        <span class="icon solid alt major fa-dumbbell"></span>
+                        <h3>Premium Sculpt</h3>
+                        <p>Intenzivni tretmani za zatezanje i učvršćivanje kritičnih zona.</p>
                     </section>
                     <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-file"></span>
-                        <h3>Odio laoreet accumsan</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-                    </section>
-                    <section class="col-4 col-6-medium col-12-xsmall">
-                        <span class="icon solid alt major fa-lock"></span>
-                        <h3>Massa arcu accumsan</h3>
-                        <p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+                        <span class="icon solid alt major fa-crown"></span>
+                        <h3>Royal Experience</h3>
+                        <p>Ekskluzivan tretman za celokupnu regeneraciju i osećaj luksuza.</p>
                     </section>
                 </div>
             </div>
+
             <footer class="major">
                 <ul class="actions special">
-                    <li><a href="#" class="button">Magna sed feugiat</a></li>
+                    <li><a href="#" class="button">Vise o paketima</a></li>
                 </ul>
             </footer>
         </div>

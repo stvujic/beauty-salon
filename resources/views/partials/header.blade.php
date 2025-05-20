@@ -1,11 +1,15 @@
 <header id="header">
-    <h1 id="logo"><a href="/">Landed</a></h1>
+    <h1 id="logo"><a href="/">KRALJEVSKA MADEROTERAPIJA</a></h1>
     <nav id="nav">
         <ul>
             <li><a href="/">Glavna</a></li>
-            <li><a href="/">O nama</a></li>
+            <li><a href="#one" class="scrolly">O nama</a></li>
             <li><a href="/">Rezervacije</a></li>
             <li><a href="/">Komentari</a></li>
+            <li><a href="/">Galerija</a></li>
+            <li><a href="/">Vauceri</a></li>
+            <li><a href="/">Cenovnik</a></li>
+            <li><a href="#four">Paketi</a></li>
             <li>
                 <a href="#">Paketi</a>
 
@@ -25,6 +29,7 @@
                 </ul>
             </li>
             <li><a href="/elements">Elements</a></li>
+            <li><a href="/login" class="button">Login</a></li>
             <li><a href="#" class="button primary">Sign Up</a></li>
         </ul>
     </nav>
