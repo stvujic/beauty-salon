@@ -1,14 +1,29 @@
-<footer id="footer">
-    <ul class="icons">
-        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
-    <ul class="copyright">
-        <li>&copy; Untitled. All rights reserved.</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
+<footer id="footer" class="wrapper style1 special fade-up">
+    <div class="container">
+        <header>
+            <h2>Kontaktiraj nas</h2>
+            <p>Pošalji nam poruku i odgovorićemo u najkraćem roku.</p>
+        </header>
+        <form method="post" action="#" class="cta">
+            <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="name" id="name" placeholder="Ime i prezime" required />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="email" name="email" id="email" placeholder="Email adresa" required />
+                </div>
+                <div class="col-12">
+                    <textarea name="message" id="message" placeholder="Poruka" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions special">
+                        <li><input type="submit" value="Pošalji poruku" class="primary" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        <ul class="copyright">
+            <li>&copy; Stefan Vujic. Sva prava zadržana.</li>
+        </ul>
+    </div>
 </footer>

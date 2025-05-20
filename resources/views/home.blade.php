@@ -11,11 +11,23 @@
                 <h2>Tvoje telo zaslužuje nežnu revoluciju</h2>
                 <p>Bez čudotvornih krema i lažnih obećanja.<br />
                     Samo stručna ruka i vidljivi rezultati.</p>
+                <ul class="actions special stacked" style="margin-top: 2em;">
+                    <li><a href="#packages" class="button primary">Pogledaj pakete</a></li>
+                    <li><a href="#contact" class="button">Zakaži tretman</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
             </header>
-            <span class="image"><img src="{{ asset('images/pic01.jpg') }}" alt="" /></span>
         </div>
         <a href="#one" class="goto-next scrolly">Next</a>
     </section>
+
 
     <!-- One -->
     <section id="one" class="spotlight style1 bottom">
@@ -128,20 +140,14 @@
     <section id="five" class="wrapper style2 special fade">
         <div class="container">
             <header>
-                <h2>Magna faucibus lorem diam</h2>
-                <p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+                <h2>Gde se nalazimo</h2>
+                <p>Poseti nas u našem salonu</p>
             </header>
-            <form method="post" action="#" class="cta">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-8 col-12-xsmall">
-                        <input type="email" name="email" id="email" placeholder="Your Email Address" />
-                    </div>
-                    <div class="col-4 col-12-xsmall">
-                        <input type="submit" value="Get Started" class="fit primary" />
-                    </div>
-                </div>
-            </form>
+            <div style="width: 100%; height: 450px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.597177934578!2d19.82216147596568!3d45.29636114462203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b113b980bd65d%3A0xf510d5f50de0c992!2z0JLQsNGB0LUg0J_Rg9GI0LjQsdGA0LrQsCAzLCDQndC-0LLQuCDQodCw0LQgNDA1NjEw!5e0!3m2!1ssr!2srs!4v1747752637111!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
+
 
 @endsection
