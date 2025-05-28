@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
 @section('title', 'Početna')
 
@@ -37,15 +37,15 @@
                 <div class="row">
                     <div class="col-4 col-12-medium">
                         <header>
-                            <h2>Naša misija je Vaša lepota i samopouzdanje</h2>
-                            <p>Stručno, posvećeno i sa ljubavlju prema svakom telu.</p>
+                            <h2>Lepota je jednostavna — kada je negujete sa pravim ljudima</h2>
+                            <p>U našem salonu sve je posvećeno tome da se osećate bolje, zategnutije i sigurnije u svom telu.</p>
                         </header>
                     </div>
                     <div class="col-4 col-12-medium">
-                        <p>U našem salonu kombinuju se proverene tehnike, pažljivo birani tretmani i individualni pristup. Svaka masaža je više od rutine — ona je korak ka boljem osećaju u sopstvenoj koži. Verujemo da nega nije luksuz, već potreba savremene žene.</p>
+                        <p>Bez šablona, bez žurbe.</p>
                     </div>
                     <div class="col-4 col-12-medium">
-                        <p>Godine iskustva, konstantno usavršavanje i ljubazna atmosfera učinili su nas izborom mnogih žena koje žele rezultate. Neka i Vaše telo prodiše, zategne se i zasija — jer Vi to zaslužujete.</p>
+                        <p>Samo Vi, Vaše telo i tretman koji odgovara baš Vama.</p>
                     </div>
                 </div>
             </div>
