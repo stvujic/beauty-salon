@@ -24,7 +24,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('appointments.store') }}">
+            <form method="POST" action="{{ route('appointments.store') }}" style="max-width: 600px; margin: 0 auto;">
                 @csrf
 
                 <div class="row gtr-uniform">
@@ -66,6 +66,7 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </section>
 

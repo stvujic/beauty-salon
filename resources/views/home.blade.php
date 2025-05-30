@@ -13,7 +13,7 @@
                     Samo stručna ruka i vidljivi rezultati.</p>
                 <ul class="actions special stacked" style="margin-top: 2em;">
                     <li><a href="#packages" class="button primary">Pogledaj pakete</a></li>
-                    <li><a href="#contact" class="button">Zakaži tretman</a></li>
+                    <li><a href="{{ route('appointments.create') }}" class="button">Zakaži tretman</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
