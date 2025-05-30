@@ -13,15 +13,21 @@ class Appointment extends Model
 
     protected $fillable = [
         'user_id',
-        'package',
+        'package_id',
         'appointment_date',
         'note',
         'price',
         'status',
     ];
 
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function package()
+    {
+        return $this->belongsTo(Package::class);
     }
 }

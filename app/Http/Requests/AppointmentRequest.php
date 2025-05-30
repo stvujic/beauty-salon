@@ -22,10 +22,9 @@ class AppointmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'package' => 'required|string|max:255',
+            'package_id' => 'required|exists:packages,id',
             'appointment_date' => 'required|date|after:now',
             'note' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-        ];
+        ]; //cena nam ovde ne treba jer je povlacimo iz baze
     }
 }
