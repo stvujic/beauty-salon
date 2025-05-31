@@ -24,7 +24,7 @@ class AppointmentController extends Controller
             'status' => 'pending',
         ]);
 
-        return redirect()->back()->with('success', 'Uspesno ste zakazali tretman.');
+        return redirect()->route('appointments.index')->with('success', 'Uspesno ste zakazali tretman.');
     }
 
     public function create()
