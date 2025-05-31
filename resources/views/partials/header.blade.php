@@ -10,9 +10,10 @@
             <li><a href="/">Vauceri</a></li>
             <li><a href="/">Cenovnik</a></li>
             <li><a href="#four">Paketi</a></li>
+
+            {{-- Dropdown posle cu ga iskorisiti --}}
             <li>
                 <a href="#">Paketi</a>
-
                 <ul>
                     <li><a href="/left-sidebar">Left Sidebar</a></li>
                     <li><a href="/right-sidebar">Right Sidebar</a></li>
@@ -28,9 +29,26 @@
                     </li>
                 </ul>
             </li>
+
+            {{-- Ovde su mi ostali dizajn elementi --}}
             <li><a href="/elements">Elements</a></li>
-            <li><a href="/login" class="button">Login</a></li>
-            <li><a href="#" class="button primary">Sign Up</a></li>
+
+            {{-- Autentikacija --}}
+            @auth
+                <li><a href="{{ route('appointments.index') }}">Moje rezervacije</a></li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="button">Logout</button>
+                    </form>
+                </li>
+            @endauth
+
+            {{-- Ovo vidi gost --}}
+            @guest
+                <li><a href="{{ route('login') }}" class="button">Login</a></li>
+                <li><a href="{{ route('register') }}" class="button primary">Sign Up</a></li>
+            @endguest
         </ul>
     </nav>
 </header>
