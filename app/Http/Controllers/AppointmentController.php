@@ -33,5 +33,16 @@ class AppointmentController extends Controller
         return view('appointments.create', compact('packages'));
     }
 
+    public function index()
+    {
+        $appointments = Appointment::where('user_id', Auth::id())
+            ->with('package')
+            ->latest()
+            ->get();
+
+        return view('appointments.index', compact('appointments'));
+    }
+
+
 
 }
