@@ -47,11 +47,26 @@
                         <input type="text" id="price" readonly>
                     </div>
 
-                    <!-- Datum i vreme -->
+                    <!-- Datum -->
                     <div class="col-12">
-                        <label for="appointment_date">Datum i vreme</label>
-                        <input type="datetime-local" name="appointment_date" id="appointment_date" value="{{ old('appointment_date') }}" required />
+                        <label for="appointment_date">Datum</label>
+                        <input
+                            type="date"
+                            name="appointment_date"
+                            id="appointment_date"
+                            required
+                            style="background-color: #222; border: 1px solid #444; padding: 10px; border-radius: 5px;"
+                        >
                     </div>
+
+                    <!-- Vreme -->
+                    <div class="col-12">
+                        <label for="appointment_time">Vreme</label>
+                        <select name="appointment_time" id="appointment_time" required>
+                            <option value="">-- Izaberi vreme --</option>
+                        </select>
+                    </div>
+
 
                     <!-- Napomena -->
                     <div class="col-12">

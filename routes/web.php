@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');});
 
     Route::get('/myappointments', [AppointmentController::class, 'index'])->name('appointments.index');
+    Route::get('/available-slots', [AppointmentController::class, 'getAvailableSlots'])->name('appointments.available-slots');
+
 
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
