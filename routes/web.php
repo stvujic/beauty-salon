@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/myappointments', [AppointmentController::class, 'index'])->name('appointments.index');
     Route::get('/available-slots', [AppointmentController::class, 'getAvailableSlots'])->name('appointments.available-slots');
+    Route::get('/available-times', [AppointmentController::class, 'availableTimes'])->name('appointments.available_times');
+
 
 
 Route::get('/admin/dashboard', function () {

@@ -59,14 +59,13 @@
                         >
                     </div>
 
-                    <!-- Vreme -->
+                    <!-- Termin -->
                     <div class="col-12">
                         <label for="appointment_time">Vreme</label>
                         <select name="appointment_time" id="appointment_time" required>
                             <option value="">-- Izaberi vreme --</option>
                         </select>
                     </div>
-
 
                     <!-- Napomena -->
                     <div class="col-12">
@@ -81,14 +80,15 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </section>
 
-    <!-- JavaScript za prikaz cene -->
+    <!-- JavaScript deo -->
     <script>
         const packageSelect = document.getElementById('package_id');
         const priceInput = document.getElementById('price');
+        const dateInput = document.getElementById('appointment_date');
+        const timeSelect = document.getElementById('appointment_time');
         const packages = {!! json_encode($packages) !!};
 
         function updatePrice() {
@@ -97,7 +97,31 @@
             priceInput.value = selectedPackage ? selectedPackage.price + ' RSD' : '';
         }
 
-        packageSelect.addEventListener('change', updatePrice);
+        function fetchAvailableTimes() {
+            const date = dateInput.value;
+            const packageId = packageSelect.value;
+
+            if (date && packageId) {
+                fetch(`/available-times?date=${date}&package_id=${packageId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        timeSelect.innerHTML = '<option value="">-- Izaberi vreme --</option>';
+                        data.forEach(time => {
+                            const option = document.createElement('option');
+                            option.value = time;
+                            option.textContent = time;
+                            timeSelect.appendChild(option);
+                        });
+                    });
+            }
+        }
+
+        packageSelect.addEventListener('change', () => {
+            updatePrice();
+            fetchAvailableTimes();
+        });
+
+        dateInput.addEventListener('change', fetchAvailableTimes);
         window.addEventListener('DOMContentLoaded', updatePrice);
     </script>
 @endsection
