@@ -4,7 +4,21 @@
         <ul>
             <li><a href="/">Glavna</a></li>
             <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
-            <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
+
+            @auth
+                @if(auth()->user()->is_admin)
+                    {{-- Samo admin vidi ovo --}}
+                    <li><a href="{{ route('admin.appointments') }}">Sve rezervacije</a></li>
+                @else
+                    {{-- Samo običan korisnik vidi ovo --}}
+                    <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
+                    <li><a href="{{ route('appointments.index') }}">Moje rezervacije</a></li>
+                @endif
+            @else
+                {{-- Gost vidi ovo --}}
+                <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
+            @endauth
+
             <li><a href="/">Komentari</a></li>
             <li><a href="/">Galerija</a></li>
             <li><a href="/">Vauceri</a></li>
@@ -30,12 +44,11 @@
                 </ul>
             </li>
 
-            {{-- Ovde su mi ostali dizajn elementi --}}
+            {{-- Ostali dizajn elementi --}}
             <li><a href="/elements">Elements</a></li>
 
             {{-- Autentikacija --}}
             @auth
-                <li><a href="{{ route('appointments.index') }}">Moje rezervacije</a></li>
                 <li>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -44,7 +57,6 @@
                 </li>
             @endauth
 
-            {{-- Ovo vidi gost --}}
             @guest
                 <li><a href="{{ route('login') }}" class="button">Login</a></li>
                 <li><a href="{{ route('register') }}" class="button primary">Sign Up</a></li>
