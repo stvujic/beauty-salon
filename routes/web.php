@@ -4,6 +4,8 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AppointmentController as AdminAppointmentController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -39,7 +41,7 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
-    Route::get('/admin/appointments', [AppointmentController::class, 'adminIndex'])->name('admin.appointments');
+    Route::get('/admin/appointments', [AdminAppointmentController::class, 'index'])->name('admin.appointments');
 });
 
 require __DIR__.'/auth.php';
