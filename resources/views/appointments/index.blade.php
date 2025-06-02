@@ -32,7 +32,21 @@
                                     {{ Carbon::parse($appointment->appointment_date)->format('d.m.Y. H:i') }}
                                 </td>
                                 <td style="text-align: center;">{{ $appointment->price }} RSD</td>
-                                <td style="text-align: center;">{{ ucfirst($appointment->status) }}</td>
+                                <td style="text-align: center;">
+                                    @switch($appointment->status)
+                                        @case('pending')
+                                            Na čekanju
+                                            @break
+                                        @case('approved')
+                                            Odobreno
+                                            @break
+                                        @case('rejected')
+                                            Odbijeno
+                                            @break
+                                        @default
+                                            Nepoznato
+                                    @endswitch
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -22,4 +22,16 @@ class AppointmentController extends Controller
         return redirect()->back()->with('success', 'Termin je uspešno obrisan.');
     }
 
+    public function updateStatus(Request $request, Appointment $appointment)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,approved,rejected',
+        ]);
+
+        $appointment->status = $request->status;
+        $appointment->save();
+
+        return redirect()->route('admin.appointments')->with('success', 'Status uspešno izmenjen.');
+    }
+
 }

@@ -43,6 +43,9 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
 
     Route::get('/admin/appointments', [AdminAppointmentController::class, 'index'])->name('admin.appointments');
     Route::delete('/admin/appointments/{id}', [AdminAppointmentController::class, 'destroy'])->name('admin.appointments.destroy');
+    Route::patch('/admin/appointments/{appointment}/status', [AdminAppointmentController::class, 'updateStatus'])->name('admin.appointments.updateStatus');
+
 });
+
 
 require __DIR__.'/auth.php';

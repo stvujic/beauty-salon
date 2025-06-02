@@ -7,12 +7,20 @@
         <div class="container">
             <header class="major">
                 <h2>Pregled svih zakazanih termina</h2>
+                @if(session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
                 <p>Ovde administrator može da vidi sve zakazane tretmane.</p>
             </header>
+
+
 
             @if ($appointments->isEmpty())
                 <p>Trenutno nema zakazanih termina.</p>
             @else
+
+
+
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -34,7 +42,18 @@
                                     {{ \Carbon\Carbon::parse($appointment->appointment_date)->format('d.m.Y. H:i') }}
                                 </td>
                                 <td style="text-align: center;">{{ $appointment->price }} RSD</td>
-                                <td style="text-align: center;">{{ ucfirst($appointment->status) }}</td>
+                                <td style="text-align: center;">
+                                    <form action="{{ route('admin.appointments.updateStatus', $appointment->id) }}" method="POST">
+                                        @csrf
+                                        @method('PATCH')
+                                        <select name="status" onchange="this.form.submit()" style="padding: 5px;">
+                                            <option value="pending" {{ $appointment->status == 'pending' ? 'selected' : '' }}>Na čekanju</option>
+                                            <option value="approved" {{ $appointment->status == 'approved' ? 'selected' : '' }}>Odobreno</option>
+                                            <option value="rejected" {{ $appointment->status == 'rejected' ? 'selected' : '' }}>Odbijeno</option>
+                                        </select>
+                                    </form>
+                                </td>
+
                                 <td style="text-align: center;">
                                     <form action="{{ route('admin.appointments.destroy', $appointment->id) }}" method="POST" onsubmit="return confirm('Da li ste sigurni da želite da obrišete ovaj termin?')">
                                         @csrf
