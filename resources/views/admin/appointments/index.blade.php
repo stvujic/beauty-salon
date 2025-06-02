@@ -7,6 +7,22 @@
         <div class="container">
             <header class="major">
                 <h2>Pregled svih zakazanih termina</h2>
+                <form method="GET" action="{{ route('admin.appointments') }}" style="margin-bottom: 20px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                        <input type="text" name="user" value="{{ request('user') }}" placeholder="Ime ili email korisnika">
+                        <input type="date" name="date" value="{{ request('date') }}">
+                        <select name="package_id">
+                            <option value="">-- Paket --</option>
+                            @foreach ($packages as $package)
+                                <option value="{{ $package->id }}" {{ request('package_id') == $package->id ? 'selected' : '' }}>
+                                    {{ $package->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <button type="submit" class="button small">Filtriraj</button>
+                        <a href="{{ route('admin.appointments') }}" class="button small">Poništi</a>
+                    </div>
+                </form>
                 @if(session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
