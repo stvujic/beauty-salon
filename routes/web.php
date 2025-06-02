@@ -42,6 +42,7 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     })->name('admin.dashboard');
 
     Route::get('/admin/appointments', [AdminAppointmentController::class, 'index'])->name('admin.appointments');
+    Route::delete('/admin/appointments/{id}', [AdminAppointmentController::class, 'destroy'])->name('admin.appointments.destroy');
 });
 
 require __DIR__.'/auth.php';

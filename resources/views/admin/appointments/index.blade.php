@@ -22,6 +22,7 @@
                             <th style="text-align: center;">Datum i vreme</th>
                             <th style="text-align: center;">Cena</th>
                             <th style="text-align: center;">Status</th>
+                            <th style="text-align: center;">Akcija</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -34,6 +35,13 @@
                                 </td>
                                 <td style="text-align: center;">{{ $appointment->price }} RSD</td>
                                 <td style="text-align: center;">{{ ucfirst($appointment->status) }}</td>
+                                <td style="text-align: center;">
+                                    <form action="{{ route('admin.appointments.destroy', $appointment->id) }}" method="POST" onsubmit="return confirm('Da li ste sigurni da želite da obrišete ovaj termin?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="button small">Obriši</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
