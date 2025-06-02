@@ -9,6 +9,7 @@
                 @if(auth()->user()->is_admin)
                     {{-- Samo admin vidi ovo --}}
                     <li><a href="{{ route('admin.appointments') }}">Sve rezervacije</a></li>
+                    <li><a href="{{ route('admin.users.index') }}">Korisnici</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
                     <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>

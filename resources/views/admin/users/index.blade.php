@@ -9,7 +9,11 @@
                 <h2>Lista korisnika</h2>
             </header>
 
-            @if ($users->isEmpty())
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+                <a href="{{ route('admin.users.create') }}" class="button primary">+ Dodaj korisnika</a>
+            </div>
+
+        @if ($users->isEmpty())
                 <p>Trenutno nema registrovanih korisnika.</p>
             @else
                 <div class="table-wrapper">
