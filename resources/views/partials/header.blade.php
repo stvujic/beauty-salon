@@ -2,8 +2,7 @@
     <h1 id="logo"><a href="/">KRALJEVSKA MADEROTERAPIJA</a></h1>
     <nav id="nav">
         <ul>
-            <li><a href="/">Glavna</a></li>
-            <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
+
 
             @auth
                 @if(auth()->user()->is_admin)
@@ -13,18 +12,25 @@
                     <li><a href="{{route('admin.packages.index')}}">Paketi</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
+
                     <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
                     <li><a href="{{ route('appointments.index') }}">Moje rezervacije</a></li>
                 @endif
+
+
+
             @else
                 {{-- Gost vidi ovo --}}
                 <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
             @endauth
 
+            <li><a href="/">Glavna</a></li>
+            <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
             <li><a href="/">Komentari</a></li>
             <li><a href="/">Galerija</a></li>
             <li><a href="/">Vauceri</a></li>
-            <li><a href="/">Cenovnik</a></li>
+            <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
+
 
             {{-- Dropdown posle cu ga iskorisiti --}}
             <li>

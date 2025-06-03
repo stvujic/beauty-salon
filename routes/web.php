@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -12,6 +13,8 @@ use App\Http\Controllers\Admin\AppointmentController as AdminAppointmentControll
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/pricelist', [PageController::class, 'packages'])->name('public.packages');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
