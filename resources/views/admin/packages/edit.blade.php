@@ -9,7 +9,7 @@
                 <h2>Izmena paketa</h2>
             </header>
 
-            <form method="POST" action="{{ route('packages.update', $package->id) }}">
+            <form method="POST" action="{{ route('admin.packages.update', $package->id) }}">
                 @csrf
                 @method('PUT')
 
@@ -32,7 +32,7 @@
                     <div class="col-12">
                         <ul class="actions">
                             <li><input type="submit" value="Sačuvaj izmene" class="primary" /></li>
-                            <li><a href="{{ route('packages.index') }}" class="button">Nazad</a></li>
+                            <li><a href="{{ route('admin.packages.index') }}" class="button">Nazad</a></li>
                         </ul>
                     </div>
                 </div>

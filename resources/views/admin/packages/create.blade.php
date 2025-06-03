@@ -9,7 +9,7 @@
                 <h2>Dodavanje novog paketa</h2>
             </header>
 
-            <form method="POST" action="{{ route('packages.store') }}">
+            <form method="POST" action="{{ route('admin.packages.store') }}">
                 @csrf
 
                 <div class="row gtr-uniform">
@@ -31,7 +31,7 @@
                     <div class="col-12">
                         <ul class="actions">
                             <li><input type="submit" value="Sačuvaj paket" class="primary" /></li>
-                            <li><a href="{{ route('packages.index') }}" class="button">Nazad</a></li>
+                            <li><a href="{{ route('admin.packages.index') }}" class="button">Nazad</a></li>
                         </ul>
                     </div>
                 </div>

@@ -10,6 +10,7 @@
                     {{-- Samo admin vidi ovo --}}
                     <li><a href="{{ route('admin.appointments') }}">Sve rezervacije</a></li>
                     <li><a href="{{ route('admin.users.index') }}">Korisnici</a></li>
+                    <li><a href="{{route('admin.packages.index')}}">Paketi</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
                     <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
@@ -24,7 +25,6 @@
             <li><a href="/">Galerija</a></li>
             <li><a href="/">Vauceri</a></li>
             <li><a href="/">Cenovnik</a></li>
-            <li><a href="#four">Paketi</a></li>
 
             {{-- Dropdown posle cu ga iskorisiti --}}
             <li>

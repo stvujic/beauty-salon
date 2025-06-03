@@ -38,9 +38,8 @@ class PackageController extends Controller
 
         Package::create($data);
 
-        return redirect()->route('packages.index')->with('success', 'Paket je uspešno dodat.');
+        return redirect()->route('admin.packages.index')->with('success', 'Paket je uspešno dodat.');
     }
-
 
     /**
      * Display the specified resource.
@@ -64,7 +63,6 @@ class PackageController extends Controller
      */
     public function update(Request $request, int $id)
     {
-
         $data = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
@@ -74,7 +72,7 @@ class PackageController extends Controller
         $package = Package::findOrFail($id);
         $package->update($data);
 
-        return redirect()->route('packages.index')->with('success', 'Paket je uspešno izmenjen.');
+        return redirect()->route('admin.packages.index')->with('success', 'Paket je uspešno izmenjen.');
     }
 
     /**
@@ -85,7 +83,6 @@ class PackageController extends Controller
         $package = Package::findOrFail($id);
         $package->delete();
 
-        return redirect()->route('packages.index')->with('success', 'Paket je uspešno obrisan.');
+        return redirect()->route('admin.packages.index')->with('success', 'Paket je uspešno obrisan.');
     }
-
 }
