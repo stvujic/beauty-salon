@@ -28,11 +28,11 @@
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="password">Nova lozinka (opciono)</label>
-                        <input type="password" name="password" id="password" />
+                        <input type="password" name="password" id="password" autocomplete="new-password" />
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="password_confirmation">Potvrdi lozinku</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" />
+                        <input type="password" name="password_confirmation" id="password_confirmation" autocomplete="new-password" />
                     </div>
 
                     <div class="col-12">

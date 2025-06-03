@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" value="{{ old('email') }}" required />
+                        <input type="email" name="email" id="email" value="{{ old('email') }}" required autocomplete="off" />
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="phone">Telefon</label>
@@ -27,11 +27,11 @@
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="password">Lozinka</label>
-                        <input type="password" name="password" id="password" required />
+                        <input type="password" name="password" id="password" required autocomplete="new-password" />
                     </div>
                     <div class="col-6 col-12-xsmall">
                         <label for="password_confirmation">Potvrdi lozinku</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" required />
+                        <input type="password" name="password_confirmation" id="password_confirmation" required autocomplete="new-password" />
                     </div>
 
                     <div class="col-12">
