@@ -17,21 +17,30 @@
                     <p>{{ User::count() }}</p>
                 </div>
                 <div class="col-4 col-12-medium">
-                    <strong>Ukupno rezervacija:</strong>
-                    <p>{{ Appointment::count() }}</p>
+                    <strong>Rezervacije dodate danas:</strong>
+                    <p>{{ Appointment::whereDate('created_at', today())->count() }}</p>
                 </div>
+
                 <div class="col-4 col-12-medium">
                     <strong>Aktivnih paketa:</strong>
                     <p>{{ Package::count() }}</p>
                 </div>
+
+                <div class="col-4 col-12-medium">
+                    <strong>Komentara danas:</strong>
+                    <p>{{ Comment::whereDate('created_at', today())->count() }}</p>
+                </div>
+
                 <div class="col-4 col-12-medium">
                     <strong>Komentara na čekanju:</strong>
                     <p>{{ Comment::where('is_approved', false)->count() }}</p>
                 </div>
+
                 <div class="col-4 col-12-medium">
-                    <strong>Slika u galeriji:</strong>
-                    <p>{{ GalleryImage::count() }}</p>
+                    <strong>Zakazano danas:</strong>
+                    <p>{{ Appointment::whereDate('appointment_date', today())->count() }}</p>
                 </div>
+
             </div>
         </div>
     </section>

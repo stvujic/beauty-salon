@@ -5,6 +5,7 @@
             @auth
                 @if(auth()->user()->is_admin)
                     {{-- Samo admin vidi ovo --}}
+                    <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                     <li><a href="{{ route('admin.appointments') }}">Sve rezervacije</a></li>
                     <li><a href="{{ route('admin.users.index') }}">Korisnici</a></li>
                     <li><a href="{{ route('admin.packages.index') }}">Paketi</a></li>
