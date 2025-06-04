@@ -16,14 +16,15 @@
                     <strong>Ukupno korisnika:</strong>
                     <p>{{ User::count() }}</p>
                 </div>
+
                 <div class="col-4 col-12-medium">
-                    <strong>Rezervacije dodate danas:</strong>
-                    <p>{{ Appointment::whereDate('created_at', today())->count() }}</p>
+                    <strong>Registrovanih korisnika danas:</strong>
+                    <p>{{ \App\Models\User::whereDate('created_at', now()->toDateString())->count() }}</p>
                 </div>
 
                 <div class="col-4 col-12-medium">
-                    <strong>Aktivnih paketa:</strong>
-                    <p>{{ Package::count() }}</p>
+                    <strong>Rezervacije dodate danas:</strong>
+                    <p>{{ Appointment::whereDate('created_at', today())->count() }}</p>
                 </div>
 
                 <div class="col-4 col-12-medium">
