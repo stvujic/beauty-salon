@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CommentController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AppointmentController as AdminAppointmentController;
