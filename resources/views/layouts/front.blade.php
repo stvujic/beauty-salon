@@ -14,7 +14,10 @@
 
     @yield('content')
 
-    @include('partials.footer')
+    @unless (request()->is('admin/*'))
+        @include('partials.footer')
+    @endunless // znaci ovde ce se footer prikazati svima samo adminu ne jer nema potrebe
+
 
 </div>
 

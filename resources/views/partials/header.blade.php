@@ -12,14 +12,13 @@
                     <li><a href="{{ route('admin.gallery.index') }}">Admin Galerija</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
-                    <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
+                    <li><a href="{{ route('appointments.create') }}">Rezervisi termin</a></li>
                     <li><a href="{{ route('appointments.index') }}">Moje rezervacije</a></li>
 
                     <li><a href="/">Glavna</a></li>
                     <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
                     <li><a href="{{ route('public.comments') }}">Komentari</a></li>
                     <li><a href="{{ route('public.gallery') }}">Galerija</a></li>
-                    <li><a href="/">Vauceri</a></li>
                     <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
 
                     {{-- Dropdown --}}
@@ -52,12 +51,11 @@
                 </li>
             @else
                 {{-- Gost vidi ovo --}}
-                <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
                 <li><a href="/">Glavna</a></li>
                 <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
+                <li><a href="{{ route('appointments.create') }}">Rezervisi termin</a></li>
                 <li><a href="{{ route('public.comments') }}">Komentari</a></li>
                 <li><a href="{{ route('public.gallery') }}">Galerija</a></li>
-                <li><a href="/">Vauceri</a></li>
                 <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
 
                 <li>
