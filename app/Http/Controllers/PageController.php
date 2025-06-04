@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\GalleryImage;
 use App\Models\Package;
 use Illuminate\Http\Request;
 
@@ -20,5 +21,11 @@ class PageController extends Controller
         return view('pages.comments', compact('comments'));
 
     }
+    public function gallery()
+    {
+        $images = GalleryImage::where('is_visible', true)->latest()->get();
+        return view('pages.gallery', compact('images'));
+    }
+
 
 }

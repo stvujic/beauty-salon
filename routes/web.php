@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminCommentController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PageController;
@@ -17,6 +18,8 @@ Route::get('/', function () {
 });
 Route::get('/pricelist', [PageController::class, 'packages'])->name('public.packages');
 Route::get('/comments', [PageController::class, 'comments'])->name('public.comments');
+Route::get('/gallery', [PageController::class, 'gallery'])->name('public.gallery');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -51,15 +54,26 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
+    //za termine
     Route::get('/admin/appointments', [AdminAppointmentController::class, 'index'])->name('admin.appointments');
     Route::delete('/admin/appointments/{id}', [AdminAppointmentController::class, 'destroy'])->name('admin.appointments.destroy');
     Route::patch('/admin/appointments/{appointment}/status', [AdminAppointmentController::class, 'updateStatus'])->name('admin.appointments.updateStatus');
     Route::resource('/admin/users', AdminUserController::class)->names('admin.users');
+
+    //za pakete
     Route::resource('/admin/packages', PackageController::class)->names('admin.packages');
 
+    //za komentare
     Route::get('/admin/comments', [AdminCommentController::class, 'index'])->name('admin.comments.index');
     Route::patch('/admin/comments/{comment}/approve', [AdminCommentController::class, 'approve'])->name('admin.comments.approve');
     Route::delete('/admin/comments/{comment}', [AdminCommentController::class, 'destroy'])->name('admin.comments.destroy');
+
+    // za slike
+    Route::get('/admin/gallery', [GalleryController::class, 'index'])->name('admin.gallery.index');
+    Route::post('/admin/gallery', [GalleryController::class, 'store'])->name('admin.gallery.store');
+    Route::delete('/admin/gallery/{galleryImage}', [GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
+    Route::patch('/admin/gallery/{galleryImage}/toggle-visibility', [GalleryController::class, 'toggleVisibility'])->name('admin.gallery.toggle');
+
 });
 
 

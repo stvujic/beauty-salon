@@ -9,6 +9,7 @@
                     <li><a href="{{ route('admin.users.index') }}">Korisnici</a></li>
                     <li><a href="{{ route('admin.packages.index') }}">Paketi</a></li>
                     <li><a href="{{ route('admin.comments.index') }}">Admin Komentari</a></li>
+                    <li><a href="{{ route('admin.gallery.index') }}">Admin Galerija</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
                     <li><a href="{{ route('appointments.create') }}">Rezervacije</a></li>
@@ -17,7 +18,7 @@
                     <li><a href="/">Glavna</a></li>
                     <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
                     <li><a href="{{ route('public.comments') }}">Komentari</a></li>
-                    <li><a href="/">Galerija</a></li>
+                    <li><a href="{{ route('public.gallery') }}">Galerija</a></li>
                     <li><a href="/">Vauceri</a></li>
                     <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
 
@@ -55,7 +56,7 @@
                 <li><a href="/">Glavna</a></li>
                 <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
                 <li><a href="{{ route('public.comments') }}">Komentari</a></li>
-                <li><a href="/">Galerija</a></li>
+                <li><a href="{{ route('public.gallery') }}">Galerija</a></li>
                 <li><a href="/">Vauceri</a></li>
                 <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
 
