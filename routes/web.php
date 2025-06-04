@@ -14,7 +14,7 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/pricelist', [PageController::class, 'packages'])->name('public.packages');
-
+Route::get('/comments', [PageController::class, 'comments'])->name('public.comments');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,6 +38,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/myappointments', [AppointmentController::class, 'index'])->name('appointments.index');
     Route::get('/available-slots', [AppointmentController::class, 'getAvailableSlots'])->name('appointments.available-slots');
     Route::get('/available-times', [AppointmentController::class, 'availableTimes'])->name('appointments.available_times');
+
+    Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+
 });
 
 // Admin routes

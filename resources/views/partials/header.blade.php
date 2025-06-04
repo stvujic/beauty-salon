@@ -26,7 +26,7 @@
 
             <li><a href="/">Glavna</a></li>
             <li><a href="{{ url('/#one') }}" class="scrolly">O nama</a></li>
-            <li><a href="/">Komentari</a></li>
+            <li><a href="{{route('public.comments')}}">Komentari</a></li>
             <li><a href="/">Galerija</a></li>
             <li><a href="/">Vauceri</a></li>
             <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
