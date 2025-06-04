@@ -10,6 +10,7 @@
                     <li><a href="{{ route('admin.appointments') }}">Sve rezervacije</a></li>
                     <li><a href="{{ route('admin.users.index') }}">Korisnici</a></li>
                     <li><a href="{{route('admin.packages.index')}}">Paketi</a></li>
+                    <li><a href="{{route('admin.comments.index')}}">Admin Komentari</a></li>
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminCommentController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\AppointmentController;
@@ -56,6 +57,9 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::resource('/admin/users', AdminUserController::class)->names('admin.users');
     Route::resource('/admin/packages', PackageController::class)->names('admin.packages');
 
+    Route::get('/admin/comments', [AdminCommentController::class, 'index'])->name('admin.comments.index');
+    Route::patch('/admin/comments/{comment}/approve', [AdminCommentController::class, 'approve'])->name('admin.comments.approve');
+    Route::delete('/admin/comments/{comment}', [AdminCommentController::class, 'destroy'])->name('admin.comments.destroy');
 });
 
 
