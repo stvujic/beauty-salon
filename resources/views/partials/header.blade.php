@@ -11,6 +11,8 @@
                     <li><a href="{{ route('admin.packages.index') }}">Paketi</a></li>
                     <li><a href="{{ route('admin.comments.index') }}">Admin Komentari</a></li>
                     <li><a href="{{ route('admin.gallery.index') }}">Admin Galerija</a></li>
+                    <li><a href="{{ route('admin.messages.index') }}">Inbox</a></li>
+
                 @else
                     {{-- Samo običan korisnik vidi ovo --}}
                     <li><a href="{{ route('appointments.create') }}">Rezervisi termin</a></li>

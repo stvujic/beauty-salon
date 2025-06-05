@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminCommentController;
+use App\Http\Controllers\Admin\AdminContactMessageController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\PackageController;
@@ -76,6 +77,8 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::post('/admin/gallery', [GalleryController::class, 'store'])->name('admin.gallery.store');
     Route::delete('/admin/gallery/{galleryImage}', [GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
     Route::patch('/admin/gallery/{galleryImage}/toggle-visibility', [GalleryController::class, 'toggleVisibility'])->name('admin.gallery.toggle');
+    Route::get('/admin/messages', [AdminContactMessageController::class, 'index'])->name('admin.messages.index');
+
 
 });
 
