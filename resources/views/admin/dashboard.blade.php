@@ -1,4 +1,11 @@
-@php use App\Models\Appointment;use App\Models\Comment;use App\Models\GalleryImage;use App\Models\Package;use App\Models\User; @endphp
+@php
+    use App\Models\Appointment;
+    use App\Models\Comment;
+    use App\Models\GalleryImage;
+    use App\Models\Package;
+    use App\Models\User;
+    use App\Models\ContactMessage;
+@endphp
 @extends('layouts.front')
 
 @section('title', 'Admin Dashboard')
@@ -40,6 +47,17 @@
                 <div class="col-4 col-12-medium">
                     <strong>Zakazano danas:</strong>
                     <p>{{ Appointment::whereDate('appointment_date', today())->count() }}</p>
+                </div>
+
+                @php
+                    $unreadMessagesCount = ContactMessage::where('is_read', false)->count();
+                @endphp
+
+                <div class="col-4 col-12-medium">
+                    <strong>Nepročitanih poruka:</strong>
+                    <p style="color: {{ $unreadMessagesCount > 0 ? 'red' : 'green' }}; font-weight: bold;">
+                        {{ $unreadMessagesCount }}
+                    </p>
                 </div>
 
             </div>
