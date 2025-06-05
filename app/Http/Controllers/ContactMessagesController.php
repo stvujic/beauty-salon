@@ -19,4 +19,11 @@ class ContactMessagesController extends Controller
 
         return redirect('/#footer')->with('success', 'Vaša poruka je uspešno poslata.');
     }
+
+    public function destroy($id)
+    {
+        ContactMessage::destroy($id);
+        return redirect()->route('admin.messages.index')->with('success', 'Poruka je obrisana.');
+    }
+
 }

@@ -9,6 +9,10 @@
                 <h2>Inbox – Kontakt poruke</h2>
             </header>
 
+            @if (session('success'))
+                <p style="color: green;">{{ session('success') }}</p>
+            @endif
+
             @if ($messages->isEmpty())
                 <p>Trenutno nema poruka.</p>
             @else
@@ -20,6 +24,7 @@
                             <th>Email</th>
                             <th>Poruka</th>
                             <th>Datum</th>
+                            <th>Akcija</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -29,6 +34,13 @@
                                 <td>{{ $msg->email }}</td>
                                 <td>{{ $msg->message }}</td>
                                 <td>{{ $msg->created_at->format('d.m.Y H:i') }}</td>
+                                <td>
+                                    <form method="POST" action="{{ route('admin.messages.destroy', $msg->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" onclick="return confirm('Da li ste sigurni?')">Obriši</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

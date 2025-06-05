@@ -78,6 +78,7 @@ Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::delete('/admin/gallery/{galleryImage}', [GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
     Route::patch('/admin/gallery/{galleryImage}/toggle-visibility', [GalleryController::class, 'toggleVisibility'])->name('admin.gallery.toggle');
     Route::get('/admin/messages', [AdminContactMessageController::class, 'index'])->name('admin.messages.index');
+    Route::delete('/admin/messages/{id}', [ContactMessagesController::class, 'destroy'])->name('admin.messages.destroy');
 
 
 });
