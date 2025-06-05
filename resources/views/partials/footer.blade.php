@@ -4,7 +4,11 @@
             <h2>Kontaktiraj nas</h2>
             <p>Pošalji nam poruku i odgovorićemo u najkraćem roku.</p>
         </header>
-        <form method="post" action="#" class="cta">
+        <form method="POST" action="{{ route('contact.message.store') }}" class="cta">
+            @csrf
+            @if(session('success'))
+                <p style="color: green; text-align: center;">{{ session('success') }}</p>
+            @endif
             <div class="row gtr-uniform gtr-50">
                 <div class="col-6 col-12-xsmall">
                     <input type="text" name="name" id="name" placeholder="Ime i prezime" required />
@@ -22,6 +26,7 @@
                 </div>
             </div>
         </form>
+
         <ul class="copyright">
             <li>&copy; Stefan Vujic. Sva prava zadržana.</li>
         </ul>

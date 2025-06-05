@@ -11,6 +11,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AppointmentController as AdminAppointmentController;
+use App\Http\Controllers\ContactMessagesController;
 
 
 Route::get('/', function () {
@@ -19,6 +20,8 @@ Route::get('/', function () {
 Route::get('/pricelist', [PageController::class, 'packages'])->name('public.packages');
 Route::get('/comments', [PageController::class, 'comments'])->name('public.comments');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('public.gallery');
+Route::post('/contact-message', [ContactMessagesController::class, 'store'])->name('contact.message.store');
+
 
 
 Route::get('/dashboard', function () {
