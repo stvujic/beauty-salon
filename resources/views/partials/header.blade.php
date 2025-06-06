@@ -28,22 +28,18 @@
                     <li>
                         <a href="#">Paketi</a>
                         <ul>
-                            <li><a href="/left-sidebar">Left Sidebar</a></li>
-                            <li><a href="/right-sidebar">Right Sidebar</a></li>
-                            <li><a href="/no-sidebar">No Sidebar</a></li>
-                            <li>
-                                <a href="#">Submenu</a>
-                                <ul>
-                                    <li><a href="#">Option 1</a></li>
-                                    <li><a href="#">Option 2</a></li>
-                                    <li><a href="#">Option 3</a></li>
-                                    <li><a href="#">Option 4</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{ route('packages.detox') }}">Detox Bliss</a></li>
+                            <li><a href="{{ route('packages.silhouette') }}">Silhouette Touch</a></li>
+                            <li><a href="{{ route('packages.glow') }}">Glow Ritual</a></li>
+                            <li><a href="{{ route('packages.harmony') }}">Harmony Escape</a></li>
+                            <li><a href="{{ route('packages.premium') }}">Premium Sculpt</a></li>
+                            <li><a href="{{ route('packages.royal') }}">Royal Experience</a></li>
+
                         </ul>
                     </li>
 
-                    <li><a href="/elements">Elements</a></li>
+{{--                    <li><a href="/elements">Elements</a></li>--}}
+                    {{--vidi kako da iskroistis ove Elements--}}
                 @endif
 
                 <li>
@@ -52,6 +48,7 @@
                         <button type="submit" class="button">Logout</button>
                     </form>
                 </li>
+
             @else
                 {{-- Gost vidi ovo --}}
                 <li><a href="/">Glavna</a></li>
@@ -61,25 +58,22 @@
                 <li><a href="{{ route('public.gallery') }}">Galerija</a></li>
                 <li><a href="{{ route('public.packages') }}">Cenovnik</a></li>
 
+                {{-- Dropdown --}}
                 <li>
                     <a href="#">Paketi</a>
                     <ul>
-                        <li><a href="/left-sidebar">Left Sidebar</a></li>
-                        <li><a href="/right-sidebar">Right Sidebar</a></li>
-                        <li><a href="/no-sidebar">No Sidebar</a></li>
-                        <li>
-                            <a href="#">Submenu</a>
-                            <ul>
-                                <li><a href="#">Option 1</a></li>
-                                <li><a href="#">Option 2</a></li>
-                                <li><a href="#">Option 3</a></li>
-                                <li><a href="#">Option 4</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="{{ route('packages.detox') }}">Detox Bliss</a></li>
+                        <li><a href="{{ route('packages.silhouette') }}">Silhouette Touch</a></li>
+                        <li><a href="{{ route('packages.glow') }}">Glow Ritual</a></li>
+                        <li><a href="{{ route('packages.harmony') }}">Harmony Escape</a></li>
+                        <li><a href="{{ route('packages.premium') }}">Premium Sculpt</a></li>
+                        <li><a href="{{ route('packages.royal') }}">Royal Experience</a></li>
+
                     </ul>
                 </li>
 
-                <li><a href="/elements">Elements</a></li>
+                {{--                    <li><a href="/elements">Elements</a></li>--}}
+                {{--vidi kako da iskroistis ove Elements--}}
 
                 <li><a href="{{ route('login') }}" class="button">Login</a></li>
                 <li><a href="{{ route('register') }}" class="button primary">Sign Up</a></li>

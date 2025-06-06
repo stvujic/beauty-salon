@@ -23,6 +23,31 @@ Route::get('/comments', [PageController::class, 'comments'])->name('public.comme
 Route::get('/gallery', [PageController::class, 'gallery'])->name('public.gallery');
 Route::post('/contact-message', [ContactMessagesController::class, 'store'])->name('contact.message.store');
 
+//PAKETI
+Route::get('/package/detox-bliss', function () {
+    return view('user.package.detox');
+})->name('packages.detox');
+
+Route::get('/package/silhouette-touch', function () {
+    return view('user.package.silhouette');
+})->name('packages.silhouette');
+
+Route::get('/package/glow-ritual', function () {
+    return view('user.package.glow');
+})->name('packages.glow');
+
+Route::get('/package/harmony-escape', function () {
+    return view('user.package.harmony');
+})->name('packages.harmony');
+
+Route::get('/package/premium-sculpt', function () {
+    return view('user.package.premium');
+})->name('packages.premium');
+
+Route::get('/package/royal-experience', function () {
+    return view('user.package.royal');
+})->name('packages.royal');
+
 
 
 Route::get('/dashboard', function () {
